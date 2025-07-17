@@ -24,7 +24,7 @@ func main() {
 	})
 	defer app.Shutdown()
 
-	c := make(chan *entities.Payment, 10000)
+	c := make(chan *entities.Payment, 100000)
 
 	connStr := fmt.Sprintf(
 		"postgresql://%s:%s@%s:%s/%s?sslmode=disable",
